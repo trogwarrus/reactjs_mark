@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+html, body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+    color: #000;
+    font-size: 16px;
+}
+
+#root, .main-area {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+}
+
+.main-area__left {
+    display: flex;
+    flex-direction: column;
+    background: #F8F8F8;
+    width: 350px;
+    border-right: 1px solid #C9C9C9;
+}
+
+.main-area__right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: calc(100vw - 376px);
+}
+
+.main-area__controls-right {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 0 ;
+}
+
+.main-area__controls-left {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0em;
+    padding: 16px;
+    background: #F8F8F8;
+    z-index: 1;
+}
+
+.main-area__button {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background: #fff;
+    border: 2px solid #ff7033;
+    border-radius: 5px;
+    padding: 8px;
+    font: inherit;
+    color: inherit;
+    margin: 0 16px;
+    cursor: pointer;
+}
+
+.main-area__controls-left .main-area__button{
+    margin: 0 ;
+}
+
+.main-area__button:hover{
+    background: #ffe9e0;
+}
+
+.main-area__input {
+    text-overflow: ellipsis;
+    border: none;
+    border-bottom: 2px solid #eaeaea;
+    background-color: #fff;
+    font: inherit;
+    color: inherit;
+    box-shadow: none;
+    padding: 4px 8px;
+    margin-top: 16px;
+}
+
+.main-area__mark-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    max-height: calc(100vh - 189px);
+    overflow-y: auto;
+    padding: 0 0 0 16px ;
+}
+
+.main_area__edit-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-height: calc(100vh - 71px);
+    overflow-y: auto;
+    padding: 0 0 0 16px ;
+    position: relative;
+}
+
+.mark-container__mark {
+    display: flex;
+    flex-direction: row;
+    font: inherit;
+    color: inherit;
+    border: 2px solid #ff7033;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.mark-container__mark:hover {
+    background: #ffe9e0;
+}
+
+.mark-container__mark:hover .mark-container__delete-container{
+    display: block;
+}
+
+.mark-container__title{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.mark-container__delete-container{
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.delete-container__delete{
+    background: #fff;
+    padding: 4px 8px;
+    width: 70px;
+    text-align: center;
+}
+
+.delete-container__delete:hover{
+    font-weight: bold;
+    background: #ff7033;
+}
+
+.mark-container__title-text{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mark-container__text{
+    font-size: 12px;
+    padding: 0 16px 4px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.edit-container__title{
+    min-height: 39px;
+    font-size: 32px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.edit-container__text{
+    font-size: inherit;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    height: 100%;
+    padding: 4px 0;
+    overflow: auto;
+}
+.edit-container__title-edit{
+    font-size:  32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    min-height: 38px;
+    background: #ebeff6;
+    border: none;
+    padding: 0;
+}
+.edit-container__text-edit{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background: #ebeff6;
+    border: none;
+    padding: 5px 0;
+    resize: none;
+    height: 100%;
+}
+
+.main-area__select-container{
+    display: flex;
+    align-items: baseline;
+    margin-top: 16px;
+}
+
+.select-container__select-label{
+
+}
+
+.select-container__select-button {
+    margin-left: 8px;
+    padding: 5px 10px 5px 5px;
+    font: inherit;
+    color: inherit;
+    border: 2px solid #ff7033;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.select-container__select-button:hover{
+    background: #ffe9e0;
+}
+.select-container__dropdown{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border: 2px solid #ff7033;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #ffe9e0;
+    width: 180px;
+    z-index: 10;
+}
+.select-container__dropdown-button {
+    padding: 10px;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    background: #fff;
+}
+.select-container__dropdown-button:hover {
+    background: #ffe9e0;
+}
